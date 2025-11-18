@@ -1,0 +1,2378 @@
+return {
+	ExtraOptions = {
+		TimingMode = "Relative",
+		EcoScale = 0.09,
+		WaveCash = function(wave)
+			if wave >= 30 then
+				return 300 + ( (wave - 1) * 60) ^ 1.0325
+			end
+			return 350 + ( (wave - 1) * 50) ^ 1.01	
+		end,
+		StartingCash = {
+			GroupBonus = true,
+			Counts = {600, 500, 450, 400}
+		}
+	},
+	Waves = {{
+    		Music = "Into the Void",
+	    	WaveLength = 20,
+		    WaveTimeline = {
+			    Enemies = {{
+				    Name = "Abnormal",
+    				Delay = 0.5,
+	    			Amount = 6,
+		    	}},
+    		},
+	    }, {
+			WaveLength = 20,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Abnormal",
+					Delay = 0.5,
+					Amount = 10,
+				}},
+			},
+		}, {
+			WaveLength = 25,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Abnormal",
+					Delay = 0.5,
+					Amount = 14,
+				}},
+			},
+		}, {
+			WaveLength = 30,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Quick",
+					Delay = 0.4,
+					Amount = 8,
+				}},
+			},
+		}, {
+			WaveLength = 30,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Abnormal",
+					Delay = 0.5,
+					Amount = 12,
+				},{
+					Name = "Quick",
+					Delay = 0.5,
+					Amount = 6,
+				},},
+			},
+		}, {
+			WaveLength = 30,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Abnormal",
+					Delay = 0.5,
+					Amount = 10,
+				}, {
+					Name = "Quick",
+					Delay = 0.4,
+					Amount = 12,
+				}},
+			},
+		}, {
+			WaveLength = 45,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Hefty",
+					Delay = 0.8,
+					Amount = 10,
+				}},
+			},
+		}, {
+			WaveLength = 45,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Abnormal",
+					Delay = 0.5,
+					Amount = 6,
+				}, {
+					Name = "Quick",
+					Delay = 0.4,
+					Amount = 7,
+				}, {
+					Name = "Void",
+					Delay = 0.85,
+					Amount = 3,
+				}, {
+					Name = "Hefty",
+					Delay = 0.8,
+					Amount = 8,
+					Attributes = {
+						["Bloated"] = true,
+						["Chance"] = 25,
+					},
+				}},
+			},
+		}, {
+			WaveLength = 45,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Hefty",
+					Delay = 0.8,
+					Amount = 15,
+					Attributes = {
+						["Bloated"] = true,
+						["Chance"] = 40,
+					},
+				}, {
+					Name = "Void",
+					Delay = 0.6,
+					Amount = 4,
+				}, {
+					Name = "Quick",
+					Delay = 0.6,
+					Amount = 5,
+            	}},
+			},
+		}, { -- Wave 10
+			WaveLength = 30,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Shroud",
+					Delay = 1.75,
+					Amount = 8,
+				}},
+			},
+		}, {
+			WaveLength = 30,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Hefty",
+					Delay = 0.8,
+					Amount = 20,
+				}, {
+					Name = "Abnormal",
+					Delay = 1,
+					Amount = 3,
+				}, {
+					Name = "Quick",
+					Delay = 0.4,
+					Amount = 8,
+				}},
+			},
+		}, {
+			WaveLength = 30,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Balloon",
+					Delay = 0.6,
+					Amount = 10,
+				}, {
+					Name = "Quick",
+					Delay = 0.3,
+					Amount = 6,
+                }, {
+					Name = "Void",
+					Delay = 0.6,
+					Amount = 3,
+				}, {
+					Name = "Abnormal",
+					Delay = 0.4,
+					Amount = 5,
+				}, {
+					Name = "Hefty",
+					Delay = 0.5,
+					Amount = 6,
+                }, {
+					Name = "Void",
+					Delay = 0.4,
+					Amount = 3,
+				}},
+			},
+		}, {
+			WaveLength = 30,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Shroud",
+					Delay = 0.45,
+					Amount = 12,
+				}, {
+					Name = "Fallen Soul",
+					Delay = 1,
+					Amount = 4,
+				}, {
+					Name = "Void",
+					Delay = 1.5,
+					Amount = 5,
+				}, {
+					Name = "Quick",
+					Delay = 0.3,
+					Amount = 6,
+				}},
+			},
+		}, {
+			WaveLength = 35,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lead",
+					Delay = 0.75,
+					Amount = 6,
+				}, {
+					Name = "Void",
+					Delay = 1,
+					Amount = 6,
+				}, {
+					Name = "Shroud",
+					Delay = 0.25,
+					Amount = 6,
+				}, {
+					Name = "Fallen Soul",
+					Delay = 0.8,
+					Amount = 4,
+				}, {
+					Name = "Hefty",
+					Delay = 0.15,
+					Amount = 6,
+				}, {
+					Name = "Balloon",
+					Delay = 0.4,
+					Amount = 6,
+					Attributes = {
+						["Bloated"] = true,
+						["Chance"] = 50,
+					},
+				}},
+			},
+		}, { -- Wave 15
+			WaveLength = 40,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Bolt",
+					Delay = 0.5,
+					Amount = 2,
+				},{
+					Name = "Void",
+					Delay = 0.4,
+					Amount = 5,
+				},{
+					Name = "Lead",
+					Delay = 0.5,
+					Amount = 8,
+					Attributes = {
+						["Bloated"] = true,
+						["Chance"] = 25,
+					},
+				},{
+					Name = "Bolt",
+					Delay = 0.5,
+					Amount = 2,
+				},{
+					Name = "Balloon",
+					Delay = 0.3,
+					Amount = 10,
+				},{
+					Name = "Hefty",
+					Delay = 0.3,
+					Amount = 6,
+				},{
+					Name = "Quick",
+					Delay = 0.3,
+					Amount = 8,
+				}, {
+					Name = "Abnormal Boss",
+					Delay = 3,
+					Amount = 1,
+				},{
+					Name = "Bolt",
+					Delay = 0.5,
+					Amount = 2,
+				}, {
+					Name = "Fallen Soul",
+					Delay = 0.7,
+					Amount = 5,
+				},},
+			},
+		}, {
+			WaveLength = 90,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Quick",
+					Delay = 0.4,
+					Amount = 10,
+					Attributes = {
+						["Bloated"] = true,
+						["Chance"] = 80,
+					},
+				},{
+					Name = "Lead Boss",
+					Time = 2,
+					Delay = 1,
+					Amount = 1,
+				},{
+					Name = "Balloon",
+					Delay = 0.5,
+					Amount = 6,
+					Attributes = {
+						["Nimble"] = true,
+						["Chance"] = 50,
+					},
+				}, {
+					Name = "Bolt",
+					Delay = 0.5,
+					Amount = 3,
+				}, {
+					Name = "Fallen Soul",
+					Delay = 0.5,
+					Amount = 5,
+				},{
+					Name = "Hefty",
+					Delay = 0.4,
+					Amount = 10,
+				}, {
+					Name = "Quick",
+					Delay = 0.1,
+					Amount = 9,
+				}, {
+					Name = "Heavy",
+					Delay = 0.4,
+					Amount = 10,
+				}, {
+					Name = "Void",
+					Delay = 0.35,
+					Amount = 6,
+				}, {
+					Name = "Abnormal Boss",
+					Delay = 0.6,
+					Amount = 3,
+				}, {
+					Name = "Void",
+					Delay = 0.6,
+					Amount = 4,
+				}, {
+					Name = "Fallen Soul",
+					Delay = 0.6,
+					Amount = 10,
+				}, {
+					Name = "Balloon",
+					Delay = 0.4,
+					Amount = 10,
+				}, {
+					Name = "Dark Hunter",
+					Delay = 0.5,
+					Amount = 1,
+					Attributes = {
+						["Boss"] = true,
+					},
+				},},
+			},
+		}, {
+			WaveLength = 90,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Breaker2",
+					Delay = 0.5,
+					Amount = 12,
+				}, {
+						Name = "Quick",
+						Time = 5,
+						Delay = 0.6,
+						Amount = 5,
+					}, {
+						Name = "Bolt",
+						Delay = 0.6,
+						Amount = 5,
+					}, {
+						Name = "Void",
+						Delay = 1.1,
+						Amount = 5,
+					}, {
+						Name = "Balloon",
+						Delay = 0.35,
+						Amount = 6,
+					}, {
+						Name = "Lead Boss",
+						Delay = 0.6,
+						Amount = 3,
+					}, {
+						Name = "Lead",
+						Delay = 0.6,
+						Amount = 5,
+					}, {
+						Name = "Hefty",
+						Delay = 0.3,
+						Amount = 9,
+					}},
+			},
+		}, {
+			WaveLength = 90,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Breaker2",
+					Delay = 0.5,
+					Amount = 3,
+				},{
+						Name = "Abnormal Boss",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["HealthRegen"] = true,
+						},
+					},{
+						Name = "Dark Hunter",
+						Time = 4,
+						Delay = 1,
+						Amount = 1,
+						Attributes = {
+							["Slowness"] = true,
+						},
+					},{
+						Name = "Lead Boss",
+						Time = 1.2,
+						Amount = 2,
+					}, {
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 3,
+					},},
+			},
+		}, {
+			WaveLength = 120,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Abnormal",
+					Delay = 0.6,
+					Amount = 7,
+					Attributes = {
+						["Bloated"] = true,
+					},
+				}, {
+						Name = "Quick",
+						Delay = 0.3,
+						Amount = 5,
+					}, {
+						Name = "Hefty",
+						Delay = 0.5,
+						Amount = 5,
+					}, {
+						Name = "Balloon",
+						Delay = 0.5,
+						Amount = 5,
+						Attributes = {
+							["Hidden"] = true,
+							["Chance"] = 40,
+						},
+					}, {
+						Name = "Shroud",
+						Delay = 0.15,
+						Amount = 15,
+					},{
+						Name = "Void",
+						Delay = 1,
+						Amount = 6,
+					}, {
+						Name = "Lead Boss",
+						Delay = 0.8,
+						Amount = 5,
+					},{
+						Name = "Mega Slow",
+						Time = 2,
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Boss"] = true,
+						},
+					}, {
+						Name = "Fallen Soul",
+						Delay = 1.2,
+						Amount = 3,
+					}, {
+						Name = "Bolt",
+						Delay = 0.4,
+						Amount = 3,
+					},},
+			},
+		}, { -- Wave 20
+			Music = "Neuro Raze",
+			WaveLength = 90,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lead Boss",
+					Delay = 1,
+					Amount = 4,
+					Attributes = {
+						["HealthRegen"] = true,
+						["Chance"] = 50,
+					},
+				}, {
+						Name = "Bolt",
+						Delay = 0.5,
+						Amount = 3,
+					}, {
+						Name = "Balloon",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Fallen Hazard",
+						Delay = 0.8,
+						Amount = 15,
+						Attributes = {
+							["Hidden"] = true,
+							["Chance"] = 60,
+						},
+					}, {
+						Name = "Lead Boss",
+						Delay = 2,
+						Amount = 1,
+						Attributes = {
+							["Hidden"] = true,
+						},
+					}, {
+						Name = "Bolt",
+						Delay = 0.8,
+						Amount = 6,
+					}, {
+						Name = "Fallen Reaper",
+						Delay = 0.5,
+						Time = 3,
+						Amount = 1,
+					}},
+			},
+		}, {
+			WaveLength = 90,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Breaker2",
+					Delay = 0.8,
+					Amount = 7,
+				}, {
+						Name = "Breaker3",
+						Delay = 0.6,
+						Amount = 2,
+					}, {
+						Name = "Bolt",
+						Delay = 0.8,
+						Amount = 9,
+					}, {
+						Name = "Hefty",
+						Delay = 0.25,
+						Amount = 20,
+					}, {
+						Name = "Fallen",
+						Delay = 0.5,
+						Amount = 3,
+					}, {
+						Name = "Void",
+						Delay = 0.15,
+						Amount = 5,
+					}, {
+						Name = "Dark Hunter",
+						Delay = 1.5,
+						Amount = 2,
+					}, {
+						Name = "Balloon",
+						Delay = 0.15,
+						Amount = 7,
+						Attributes = {
+							["Hidden"] = true,
+						},
+					}, {
+						Name = "Bolt",
+						Delay = 0.4,
+						Amount = 7,
+					}, {
+						Name = "Lead Boss",
+						Delay = 1.5,
+						Amount = 2,
+						Attributes = {
+							["Bloated"] = true,
+						},
+					},{
+						Name = "Shroud",
+						Delay = 0.8,
+						Amount = 4,
+					}, {
+						Name = "Dark Hunter",
+						Delay = 0.8,
+						Amount = 1,
+						Attributes = {
+							["Strength"] = true,
+							["HealthRegen"] = true,
+							["Hidden"] = true,
+						},
+					}, {
+						Name = "Breaker4",
+						Delay = 0.5,
+						Amount = 1,
+					},},
+			},
+		}, {
+			WaveLength = 80,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Quick",
+					Delay = 0.2,
+					Amount = 10,
+					Attributes = {
+						["Bloated"] = true,
+						["Chance"] = 70,
+					},
+				}, {
+						Name = "Shroud",
+						Delay = 0.5,
+						Amount = 9,
+					}, {
+						Name = "Breaker2",
+						Delay = 0.4,
+						Amount = 7,
+					}, {
+						Name = "Fallen",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Fallen Rusher",
+						Delay = 1,
+						Amount = 3,
+					}, {
+						Name = "Bolt",
+						Delay = 0.45,
+						Amount = 5,
+					}, {
+						Name = "Dark Hunter",
+						Delay = 1.5,
+						Amount = 1,
+					}, {
+						Name = "Balloon",
+						Delay = 0.4,
+						Amount = 7,
+					}, {
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 5,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 40,
+						},
+					}, {
+						Name = "Lead Boss",
+						Delay = 1,
+						Amount = 4,
+						Attributes = {
+							["HealthRegen"] = true,
+							["Chance"] = 50,
+						},
+					}},
+			},
+		}, {
+			WaveLength = 80,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lead",
+					Delay = 0.4,
+					Amount = 15,
+					Attributes = {
+						["Bloated"] = true,
+						["Chance"] = 80,
+					},
+				}, {
+						Name = "Shadow Boss",
+						Delay = 0.8,
+						Time = 1.5,
+						Amount = 1,
+					}, {
+						Name = "Fallen Hazard",
+						Delay = 0.8,
+						Amount = 8,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 40,
+						},
+					}, {
+						Name = "Hidden Boss",
+						Delay = 2,
+						Amount = 1,
+					}, {
+						Name = "Dark Hunter",
+						Delay = 2.75,
+						Amount = 4,
+					}},
+			},
+		}, {
+			WaveLength = 80,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lead",
+					Delay = 0.5,
+					Amount = 10,
+				}, {
+						Name = "Balloon",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Void",
+						Delay = 0.6,
+						Amount = 8,
+					}, {
+						Name = "Bolt",
+						Delay = 0.6,
+						Amount = 6,
+					}, {
+						Name = "Fallen",
+						Delay = 0.6,
+						Amount = 1,
+					},{
+						Name = "Shroud",
+						Delay = 0.5,
+						Amount = 4,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 25,
+						},
+					},{ 
+						Name = "Mega Slow",
+						Delay = 1,
+						Amount = 1,
+					},{
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Fallen",
+						Delay = 0.5,
+						Amount = 2,
+						Attributes = {
+							["Hidden"] = true,
+							["Chance"] = 70,
+						},
+					},{
+						Name = "Fallen Reaper",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 70,
+						},
+					}, {
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Dark Hunter",
+						Delay = 16,
+						Amount = 1,
+					},{
+						Name = "Fallen Hazard",
+						Delay = 0.8,
+						Time = 0.5,
+						Amount = 9,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 40,
+						},
+					},},
+			},
+		}, { -- Wave 25
+			WaveLength = 80,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lead Boss",
+					Delay = 0.8,
+					Amount = 10,
+					Attributes = {
+						["Bloated"] = true,
+						["Chance"] = 32,
+					},
+				}, {
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 8,
+					}, {
+						Name = "Fallen",
+						Delay = 1.65,
+						Amount = 3,
+					}, {
+						Name = "Shadow Boss",
+						Delay = 1,
+						Time = 5,
+						Amount = 1,
+						Attributes = {
+							["Bloated"] = true,
+							["Boss"] = true,
+						},
+					}, {
+						Name = "Shadow Boss",
+						Delay = 1,
+						Time = 5,
+						Amount = 1,
+					}, {
+						Name = "Bolt",
+						Delay = 0.5,
+						Amount = 7,
+					}, {
+						Name = "Molten Construct",
+						Delay = 1.5,
+						Amount = 1,
+					}, {
+						Name = "Fallen Soul",
+						Delay = 0.5,
+						Amount = 3,
+					}, {
+						Name = "Dark Hunter",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Hidden"] = true,
+						},
+					},},
+			},
+		}, {
+			WaveLength = 100,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lead",
+					Delay = 0.5,
+					Amount = 15,
+				},{
+						Name = "Mega Slow",
+						Delay = 1.5,
+						Amount = 1,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 75,
+						},
+					},{
+						Name = "Fallen Reaper",
+						Delay = 2,
+						Amount = 2,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 15,
+						},
+					},{
+						Name = "Fallen",
+						Delay = 2,
+						Amount = 5,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 45,
+						},
+					}, {
+						Name = "Molten Mechanic",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Dark Hunter",
+						Delay = 3.5,
+						Amount = 1,
+					},},
+			},
+		}, {
+			WaveLength = 150,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Fallen Rusher",
+					Delay = 0.5,
+					Amount = 4,
+				}, {
+						Name = "Speedy Boss",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Fallen Seraph",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 8,
+					}, {
+						Name = "Golden",
+						Delay = 0.5,
+						Amount = 3,
+					}, {
+						Name = "Molten Mechanic",
+						Delay = 1.5,
+						Amount = 1,
+					}, {
+						Name = "Golden Mechanic",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Boss"] = true,
+						},
+					}, {
+						Name = "Shadow Boss",
+						Delay = 15,
+						Time = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Nimble"] = true,
+						},
+					}, {
+						Name = "Fallen Hazard",
+						Delay = 0.8,
+						Time = 0.5,
+						Amount = 2,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 80,
+						},
+					}, {
+						Name = "Dark Hunter",
+						Delay = 15,
+						Amount = 1,
+					}},
+			},
+		}, {
+			Music = "Catharsis",
+			WaveLength = 400,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Fallen Rusher",
+					Delay = 0.7,
+					Amount = 5,
+				}, {
+						Name = "Shadow Boss",
+						Delay = 1,
+						Time = 3,
+						Amount = 1,
+					}, {
+						Name = "Lead Boss",
+						Delay = 1,
+						Amount = 2,
+					}, {
+						Name = "Fallen Seraph",
+						Delay = 1,
+						Amount = 3,
+					}, {
+						Name = "Mega Slow",
+						Delay = 1,
+						Amount = 1,
+					}, {
+						Name = "Lead",
+						Delay = 0.4,
+						Amount = 8,
+					}, {
+						Name = "Molten Mechanic",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Balloon",
+						Delay = 1,
+						Amount = 7,
+					}, {
+						Name = "Lead Boss",
+						Delay = 1,
+						Amount = 3,
+						Attributes = {
+							["Bloated"] = true,
+							["Nimble"] = true,
+							["Chance"] = 50,
+						},
+					}, {
+						Name = "Bolt",
+						Delay = 0.5,
+						Amount = 10,
+					}, {
+						Name = "Fallen Hazard",
+						Delay = 1,
+						Amount = 3,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 33,
+						},
+					}, {
+						Name = "Fallen Reaper",
+						Delay = 1,
+						Amount = 4,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 50,
+						},
+					}, {
+						Name = "Grave Digger",
+						Delay = 15,
+						Amount = 1,
+						Attributes = {
+							["Strength"] = true,
+							Boss = true
+						},
+					}, {
+						Name = "Speedy Boss",
+						Delay = 2.6,
+						Amount = 1,
+					}, {
+						Name = "Fallen",
+						Delay = 1,
+						Amount = 3,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 33,
+						},
+					}, {
+						Name = "Dark Hunter",
+						Delay = 0.5,
+						Amount = 1,
+					}},
+			},
+		}, {
+			WaveLength = 80,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Mega Slow",
+					Delay = 1,
+					Amount = 2,
+				}, {
+						Name = "Fallen Rusher",
+						Delay = 0.6,
+						Amount = 10,
+					}, {
+						Name = "Fallen Reaper",
+						Delay = 1.25,
+						Amount = 3,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 50,
+						},
+					}, {
+						Name = "Shadow Boss",
+						Delay = 1.5,
+						Amount = 2,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 33,
+						},
+					}, {
+						Name = "Fallen",
+						Delay = 0.6,
+						Amount = 5,
+					}, {
+						Name = "Fallen Hero",
+						Delay = 0.6,
+						Amount = 1,
+					}, {
+						Name = "Bolt",
+						Delay = 0.5,
+						Amount = 7,
+					}, {
+						Name = "Fallen Soul",
+						Delay = 0.5,
+						Amount = 7,
+					}, {
+						Name = "Giant Boss",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Boss"] = true
+						},
+					}},
+			},
+		}, { -- Wave 30
+			WaveLength = 80,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Mega Slow",
+					Delay = 1,
+					Amount = 3,
+				}, {
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 10,
+					}, {
+						Name = "Fallen Rusher",
+						Delay = 0.5,
+						Amount = 10,
+					}, {
+						Name = "Templar",
+						Delay = 4,
+						Amount = 1,
+						Attributes = {
+							["Boss"] = true,
+							["Bloated"] = true,
+						},
+					}, {
+						Name = "Breaker3",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Bolt",
+						Delay = 0.5,
+						Amount = 11,
+					}, {
+						Name = "Fallen Soul",
+						Delay = 0.5,
+						Amount = 8,
+					}, {
+						Name = "Fallen",
+						Delay = 0.5,
+						Amount = 11,
+					}, {
+						Name = "Shadow Boss",
+						Delay = 1,
+						Amount = 3,
+					}, {
+						Name = "Giant Boss",
+						Delay = 0.5,
+						Amount = 2,
+					},{
+						Name = "Fallen Reaper",
+						Delay = 2,
+						Amount = 2,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 45,
+						},
+					}, {
+						Name = "Soul Boss",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Boss"] = true,
+							Bloated = true,
+						},
+					}},
+			},
+		}, {
+			WaveLength = 80,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Fallen Seraph",
+					Delay = 0.5,
+					Amount = 4,
+				}, {
+						Name = "Balloon",
+						Delay = 0.5,
+						Amount = 8,
+					}, {
+						Name = "Lead Boss",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Fallen Reaper",
+						Delay = 0.8,
+						Amount = 4,
+					},{
+						Name = "Shadow Boss",
+						Delay = 2,
+						Amount = 5,
+						Attributes = {
+							["Bloated"] = true,
+						},
+					},{
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 6,
+					},{
+						Name = "Hefty",
+						Delay = 0.5,
+						Amount = 4,
+					},{
+						Name = "Fallen Rusher",
+						Delay = 0.8,
+						Amount = 6,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 80,
+						},
+					},{
+						Name = "Mega Slow",
+						Delay = 1,
+						Amount = 2,
+					}, {
+						Name = "Molten Defender",
+						Delay = 1.8,
+						Amount = 3,
+					}, {
+						Name = "Molten Mechanic",
+						Delay = 0.5,
+						Amount = 4,
+					},{
+						Name = "Fallen Titan",
+						Delay = 1.5,
+						Amount = 1,
+						Attributes = {
+							["Bloated"] = true,
+						},
+					},},
+			},
+		}, {
+			Music = "Duality",
+			WaveLength = 150,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Fallen Seraph",
+					Delay = 1,
+					Amount = 6,
+					Attributes = {
+						["Nimble"] = true,
+					},
+				}, {
+						Name = "Mega Slow",
+						Delay = 0.8,
+						Amount = 2,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 50,
+						},
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 2,
+						Amount = 1,
+						Attributes = {
+							["Bloated"] = true,
+							["Boss"] = true,
+						},
+					}, {
+						Name = "Fallen Hazard",
+						Delay = 0.8,
+						Time = 0.5,
+						Amount = 2,
+						Attributes = {
+							["Hidden"] = true,
+							["Chance"] = 70,
+						},
+					}, {
+						Name = "Fallen",
+						Delay = 0.8,
+						Time = 0.5,
+						Amount = 9,
+						Attributes = {
+							["Bloated"] = true,
+						},
+					}, {
+						Name = "Fallen Reaper",
+						Delay = 0.8,
+						Amount = 2,
+					}, {
+						Name = "Shadow Boss",
+						Delay = 1,
+						Time = 1,
+						Amount = 6,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 80,
+						},
+					}},
+			},
+		}, {
+			WaveLength = 150,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Shadow Boss",
+					Delay = 1,
+					Amount = 6,
+					Attributes = {
+						["Bloated"] = true,
+						["Chance"] = 65
+					},
+				}, {
+						Name = "Breaker2",
+						Delay = 0.4,
+						Amount = 8,
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 2,
+						Amount = 1,
+					}, {
+						Name = "Giant Boss",
+						Delay = 1.5,
+						Amount = 1,
+					}, {
+						Name = "Molten Mechanic",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Fallen Titan",
+						Delay = 4,
+						Amount = 1,
+					}, {
+						Name = "Golden Executioner",
+						Delay = 4,
+						Amount = 1,
+						Attributes = {
+							Boss = true
+						},
+					}, {
+						Name = "Fallen Reaper",
+						Delay = 0.6,
+						Amount = 4,
+					}, {
+						Name = "Fallen Hero",
+						Delay = 0.6,
+						Amount = 1,
+					},{
+						Name = "Fallen",
+						Delay = 2,
+						Amount = 2,
+					}, {
+						Name = "Breaker4",
+						Delay = 0.7,
+						Amount = 2,
+					},{
+						Name = "Fallen",
+						Delay = 2,
+						Amount = 8,
+					},{
+						Name = "Fallen Reaper",
+						Delay = 1,
+						Amount = 2,
+					}},
+			},
+		}, {
+			WaveLength = 150,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Giant Boss",
+					Delay = 1,
+					Amount = 3,
+					Attributes = {
+						["Nimble"] = true,
+						["Chance"] = 75,
+					},
+				}, {
+						Name = "Fallen Titan",
+						Delay = 1,
+						Amount = 1,
+					}, {
+						Name = "Molten Mechanic",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 2,
+						Amount = 1,
+					}, {
+						Name = "Unknown",
+						Delay = 1,
+						Time = 3,
+						Amount = 1,
+					}, {
+						Name = "Fallen Rusher",
+						Delay = 0.6,
+						Amount = 8,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 95,
+						},
+					}, {
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 15,
+					}, {
+						Name = "Fallen Seraph",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Fallen Angel",
+						Delay = 0.6,
+						Amount = 3,
+					}, {
+						Name = "Fallen Titan",
+						Delay = 0.5,
+						Amount = 1,
+					},{
+						Name = "Lead Boss",
+						Delay = 1,
+						Amount = 2,
+					}, {
+						Name = "Tank",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Breaker5",
+						Delay = 0.7,
+						Amount = 4,
+					}, {
+						Name = "Molten Mechanic",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Fallen Titan",
+						Delay = 3,
+						Amount = 2,
+					}, {
+						Name = "Fallen Soul",
+						Delay = 0.5,
+						Amount = 8,
+
+					},},
+			},
+		}, { -- Wave 35
+			WaveLength = 360,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Giant Boss",
+					Delay = 1,
+					Amount = 4,
+				}, {
+						Name = "Fallen Rusher",
+						Delay = 0.8,
+						Amount = 4,
+						Attributes = {
+							["Bloated"] = true,
+							["Nimble"] = true,
+						},
+					}, {
+						Name = "Shadow Boss",
+						Delay = 1,
+						Time = 3,
+						Amount = 8,
+					}, {
+						Name = "Fallen Angel",
+						Delay = 0.6,
+						Amount = 3,
+					}, {
+						Name = "Molten Titan",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Molten Mechanic",
+						Delay = 0.5,
+						Amount = 3,
+					}, {
+						Name = "Molten Defender",
+						Delay = 1.25,
+						Amount = 4,
+						Attributes = {
+							Bloated = true,
+						},
+					}, {
+						Name = "Tank",
+						Delay = 0.6,
+						Amount = 2,
+					}, {
+						Name = "Fallen",
+						Delay = 0.5,
+						Amount = 8,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 72,
+						},
+					}, {
+						Name = "Fallen Hazard",
+						Delay = 0.5,
+						Amount = 11,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 62	, -- Set this between 1 and 100
+						},
+					}, {
+						Name = "Lava",
+						Delay = 0.6,
+						Amount = 6,
+						Attributes = {
+							["Bloated"] = true,
+							Hidden = true,
+							["Chance"] = 62	, -- Set this between 1 and 100
+						},
+					}, {
+						Name = "Molten Warlord",
+						Delay = 15,
+						Amount = 1,
+						Attributes = {
+							["Nimble"] = true,
+						},
+					}, {
+						Name = "Fallen Giant",
+						Delay = 0.5,
+						Amount = 3,
+					}, {
+						Name = "Fallen Soul",
+						Delay = 1,
+						Amount = 8,
+					},{
+						Name = "Fallen Titan",
+						Time = 6,
+						Delay = 6,
+						Amount = 2,
+						Attributes = {
+							["Nimble"] = true,
+						},
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 2,
+						Amount = 2,
+					}, {
+						Name = "Breaker5",
+						Delay = 0.7,
+						Amount = 4,
+					}, {
+						Name = "Golden",
+						Delay = 0.5,
+						Amount = 7,
+					}, {
+						Name = "Tank",
+						Delay = 0.5,
+						Amount = 4,
+					},},
+			},
+		}, {
+			WaveLength = 240,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Mega Slow",
+					Delay = 1,
+					Amount = 8,
+					Attributes = {
+						["Nimble"] = true,
+						["Chance"] = 55,
+					},
+				}, {
+						Name = "Fallen",
+						Delay = 0.5,
+						Amount = 8,
+					}, {
+						Name = "Fallen Rusher",
+						Delay = 0.5,
+						Amount = 3,
+					}, {
+						Name = "Fallen Giant",
+						Delay = 1,
+						Amount = 1,
+					}, {
+						Name = "Breaker4",
+						Delay = 0.6,
+						Amount = 5,
+					}, {
+						Name = "Fallen Titan",
+						Delay = 1,
+						Amount = 1,
+					}, {
+						Name = "24 Karat",
+						Delay = 0.5,
+						Amount = 7,
+					}, {
+						Name = "Giant Boss",
+						Delay = 0.6,
+						Amount = 2,
+					},{
+						Name = "Lost Soul",
+						Delay = 0.5,
+						Path = 1,
+						Amount = 2,
+						Attributes = {
+							["Nimble"] = true,
+						},
+					},{
+						Name = "Fallen Rusher",
+						Delay = 0.6,
+						Amount = 8,
+					},{
+						Name = "Fallen Reaper",
+						Delay = 0.5,
+						Amount = 3,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 33,
+						},
+					}, {
+						Name = "Fallen",
+						Delay = 0.6,
+						Amount = 7,
+					}, {
+						Name = "Void",
+						Delay = 0.6,
+						Amount = 4,
+					}, {
+						Name = "Fallen Seraph",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Unknown",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Fallen Courier",
+						Delay = 0.6,
+						Amount = 1,
+					}, {
+						Name = "Hazard",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Fallen Defender",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 2,
+						Amount = 1,
+					},},
+			},
+		}, {
+			WaveLength = 120,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Giant Boss",
+					Delay = 1,
+					Amount = 5,
+				}, {
+						Name = "Fallen Defender",
+						Delay = 0.5,
+						Amount = 5,
+					}, {
+						Name = "Mega Slow",
+						Delay = 0.75,
+						Amount = 2,
+						Attributes = {
+							["Bloated"] = true,
+							["Chance"] = 32, -- Set this between 1 and 100
+						},
+					}, {
+						Name = "Lava",
+						Delay = 0.6,
+						Amount = 12,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 62	, -- Set this between 1 and 100
+						},
+					}, {
+						Name = "Breaker4",
+						Delay = 0.6,
+						Amount = 8,
+					},{
+						Name = "Corrupted Fallen",
+						Delay = 2,
+						Amount = 2,
+					}, {
+						Name = "Breaker2",
+						Delay = 0.5,
+						Amount = 8,
+					}, {
+						Name = "Vindicator",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Boss"] = true
+						},
+					}, {
+						Name = "Shadow Boss",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Fallen Seraph",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Molten",
+						Delay = 0.5,
+						Amount = 7,
+					}, {
+						Name = "Breaker5",
+						Delay = 0.7,
+						Amount = 3,
+					}, {
+						Name = "Fallen Hero",
+						Delay = 0.5,
+						Amount = 2,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 33,
+						},
+					}, {
+						Name = "Fallen Defender",
+						Delay = 0.5,
+						Amount = 5,
+					}, {
+						Name = "Golden Mechanic",
+						Delay = 2.3,
+						Amount = 2,
+					}, {
+						Name = "Golden",
+						Delay = 0.7,
+						Amount = 8,
+					}},
+			},
+		}, {
+			WaveLength = 180,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Mega Slow",
+					Delay = 1,
+					Amount = 6,
+					Attributes = {
+						["Nimble"] = true,
+						["Chance"] = 50,
+					},
+				}, {
+						Name = "Giant Boss",
+						Delay = 0.8,
+						Amount = 4,
+					},{
+						Name = "Blitz",
+						Delay = 0.8	,
+						Amount = 3,
+					}, {
+						Name = "Balloon",
+						Delay = 0.5,
+						Amount = 8,
+					}, {
+						Name = "Lava",
+						Delay = 0.5,
+						Amount = 12,
+					},{
+						Name = "Soul",
+						Delay = 0.5,
+						Amount = 5,
+					},{
+						Name = "Hazard",
+						Delay = 1,
+						Amount = 8,
+					}, {
+						Name = "Fallen Seraph",
+						Delay = 0.5,
+						Amount = 6,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 50,
+						},
+					}, {
+						Name = "Necromancer Boss",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Boss"] = true,
+						},
+					}, {
+						Name = "Fallen Defender",
+						Delay = 0.5,
+						Amount = 3,
+					}, {
+						Name = "Fallen Giant",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 4,
+						Amount = 3,
+					}, {
+						Name = "Reanimator",
+						Delay = 0.5,
+						Time = 8,
+						Amount = 1,
+						Attributes = {
+							["Boss"] = true,
+						},
+					},},
+			},
+		}, {
+			WaveLength = 80,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lead Boss",
+					Delay = 1,
+					Amount = 8,
+				}, {
+						Name = "Lead Balloon",
+						Delay = 0.6,
+						Amount = 6,
+					}, {
+						Name = "Breaker5",
+						Delay = 1.2,
+						Amount = 6,
+					}, {
+						Name = "Fallen Courier",
+						Delay = 2,
+						Amount = 2,
+					}, {
+						Name = "Golden Executioner",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Nimble"] = true,
+						},
+					}, {
+						Name = "Molten Titan",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Fallen Defender",
+						Delay = 0.5,
+						Amount = 6,
+					},{
+						Name = "Blitz",
+						Delay = 0.8	,
+						Amount = 4,
+					}, {
+						Name = "Gold Guard",
+						Delay = 0.5,
+						Amount = 1,
+					},{
+						Name = "Fallen Guardian",
+						Delay = 0.8	,
+						Amount = 1,
+						Attributes = {
+							["Hidden"] = true,
+						},
+					}, {
+						Name = "Golden Mechanic",
+						Delay = 2.25,
+						Amount = 7,
+					}},
+			},
+		}, { -- Wave 40
+			Music = "HardcoreAmbience40",
+			WaveLength = 200,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lava",
+					Delay = 0.5,
+					Amount = 7,
+				}, {
+						Name = "Breaker4",
+						Delay = 0.5,
+						Amount = 8,
+					},{
+						Name = "Giant Boss",
+						Delay = 0.8,
+						Amount = 6,
+						Attributes = {
+							["Nimble"] = true,
+							Chance = 33,
+						},
+					}, {
+						Name = "Fallen Courier",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Fallen",
+						Delay = 0.5,
+						Amount = 9,
+					}, {
+						Name = "Golden Executioner",
+						Delay = 3,
+						Amount = 3,
+						Attributes = {
+							["Bloated"] = true,
+						},
+					}, {
+						Name = "Lava",
+						Delay = 0.5,
+						Amount = 12,
+						Attributes = {
+							["Bloated"] = true,
+							["Nimble"] = true
+						},
+					}, {
+						Name = "Fallen Seraph",
+						Delay = 0.5,
+						Amount = 7,
+					}, {
+						Name = "Molten Titan",
+						Delay = 0.6,
+						Amount = 4,
+					}, {
+						Name = "Lava",
+						Delay = 0.6,
+						Amount = 6,
+					}, {
+						Name = "Vindicator",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Gold Guard",
+						Delay = 0.5,
+						Amount = 4,
+						Attributes = {
+							["Hidden"] = true,
+							["Chance"] = 33,
+						},
+					}, {
+						Name = "Gold Titan",
+						Delay = 15,
+						Amount = 1,
+						Attributes = {
+							["Bloated"] = true,
+						},
+					}, {
+						Name = "Golden Mechanic",
+						Delay = 1.65,
+						Amount = 5,
+					}, {
+						Name = "Golden Executioner",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Tank",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Fallen Angel",
+						Delay = 1.25,
+						Amount = 3,
+					},},
+			},
+		}, {
+			WaveLength = 240,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lava",
+					Delay = 0.5,
+					Amount = 12,
+				}, {
+						Name = "Mega Slow",
+						Delay = 0.75,
+						Amount = 6,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 80, -- Set this between 1 and 100
+						},
+					}, {
+						Name = "Giant Boss",
+						Delay = 0.7,
+						Amount = 6,
+					}, {
+						Name = "Fallen Defender",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Fallen Titan",
+						Delay = 1.25,
+						Amount = 3,
+					}, {
+						Name = "Fallen Giant",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Fallen Courier",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Vindicator",
+						Delay = 3,
+						Amount = 2,
+					},{
+						Name = "Slow King",
+						Delay = 2,
+						Time = 2,
+						Amount = 4,
+					},{
+						Name = "Fallen Seraph",
+						Delay = 0.5,
+						Amount = 3,
+					}, {
+						Name = "Fallen Defender",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Reanimator",
+						Delay = 1.25,
+						Amount = 1,
+					},},
+			},
+		},{
+			WaveLength = 240,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Breaker4",
+					Delay = 0.5,
+					Amount = 15,
+				}, {
+						Name = "Error",
+						Delay = 0.4,
+						Amount = 7,
+					}, {
+						Name = "Lead Balloon",
+						Delay = 0.5,
+						Amount = 6,
+					},{
+						Name = "Fallen Courier",
+						Delay = 0.5,
+						Amount = 2,
+					},{
+						Name = "Mega Slow",
+						Delay = 1.5,
+						Amount = 8,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 95,
+						},
+					}, {
+						Name = "Fallen Reaper",
+						Delay = 0.5,
+						Amount = 8,
+						Attributes = {
+							["Nimble"] = true,
+							["Bloated"] = true
+						},
+					}, {
+						Name = "Vindicator",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Unknown",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Fallen Guardian",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Blitz",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Fallen Courier",
+						Delay = 1.5,
+						Amount = 2,
+					}, {
+						Name = "Vindicator",
+						Delay = 0.6,
+						Amount = 1,
+					}, {
+						Name = "Fallen Swordmaster",
+						Delay = 1,
+						Amount = 1,
+					}, {
+						Name = "Fallen Defender",
+						Delay = 0.6,
+						Amount = 7,
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 1.5,
+						Amount = 5,
+					}, {
+						Name = "Blitz",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Reanimator",
+						Delay = 1.25,
+						Amount = 1,
+					},},
+			},
+		},{
+			WaveLength = 120,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Error",
+					Delay = 0.5,
+					Amount = 8,
+				}, {
+						Name = "Circuit",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Soul Stealer",
+						Delay = 1.25,
+						Amount = 5,
+						Attributes = {
+							["Nimble"] = true,
+						},
+					},{
+						Name = "Lead Balloon",
+						Delay = 0.5,
+						Amount = 8,
+					},{
+						Name = "Lead Boss",
+						Delay = 0.5,
+						Amount = 12,
+					},{
+						Name = "Blitz",
+						Delay = 1.5,
+						Amount = 5,
+					}, {
+						Name = "Fallen Courier",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Vindicator",
+						Delay = 2,
+						Amount = 2,
+					}, {
+						Name = "Fallen Angel",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 1.5,
+						Amount = 6,
+					}, {
+						Name = "Fallen Guardian",
+						Delay = 1.25,
+						Amount = 4,
+					}, {
+						Name = "Fallen Angel",
+						Delay = 0.6,
+						Amount = 8,
+						Attributes = {
+							["Nimble"] = true,
+							["Bloated"] = true,
+						},
+					}, {
+						Name = "Fallen King",
+						Delay = 12,
+						Amount = 1,
+						Attributes = {
+							["Strength"] = true,
+						},
+					}, {
+						Name = "Fallen Courier",
+						Delay = 0.5,
+						Amount = 5,
+					}, {
+						Name = "Reanimator",
+						Delay = 2,
+						Amount = 1,
+						Attributes = {
+							["Slowness"] = true,
+						},
+					},},
+			},
+		},{
+			WaveLength = 100,
+			Music = "Hardcore44",
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Lava",
+					Delay = 0.5,
+					Amount = 20,
+					Attributes = {
+						["Nimble"] = true,
+					},
+				}, {
+						Name = "Mega Slow",
+						Delay = 0.5,
+						Amount = 5,
+						Attributes = {
+							["Bloated"] = true,
+							Hidden = true
+						},
+					}, {
+						Name = "Health Cutlist",
+						Delay = 0.6,
+						Amount = 1,
+					}, {
+						Name = "Giant Boss",
+						Delay = 0.6,
+						Amount = 6,
+					}, {
+						Name = "Soul Stealer",
+						Delay = 0.6,
+						Amount = 2,
+						Attributes = {
+							Hidden = true
+						},
+					}, {
+						Name = "Reanimator",
+						Delay = 0.6,
+						Amount = 1,
+					}, {
+						Name = "Fallen Reaper",
+						Delay = 0.6,
+						Amount = 10,
+						Attributes = {
+							["Nimble"] = true,
+							Hidden = true,
+							Bloated = true
+						},
+					}, {
+						Name = "Breaker5",
+						Delay = 0.6,
+						Amount = 7,
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 1.5,
+						Amount = 5,
+					}, {
+						Name = "Lead Balloon",
+						Delay = 0.5,
+						Amount = 8,
+					},{
+						Name = "Circuit",
+						Delay = 0.8,
+						Amount = 1,
+					},{
+						Name = "Fallen Courier",
+						Time = 1,
+						Delay = 1.5,
+						Amount = 4,
+						Attributes = {
+							["HealthRegen"] = true,
+						},
+					}, {
+						Name = "Vindicator",
+						Delay = 1.75,
+						Amount = 2,
+					}, {
+						Name = "Fallen Angel",
+						Delay = 0.6,
+						Amount = 6,
+						Attributes = {
+							["Nimble"] = true,
+							["Bloated"] = true,
+						},
+					}, {
+						Name = "Fallen Guardian",
+						Delay = 1.8,
+						Amount = 3,
+					}, {
+						Name = "Fallen Titan",
+						Delay = 0.6,
+						Amount = 4,
+						Attributes = {
+							["Nimble"] = true,
+							["Bloated"] = true,
+						},
+					}, {
+						Name = "Circuit",
+						Delay = 1,
+						Amount = 3,
+					}, {
+						Name = "Giant Boss",
+						Delay = 0.6,
+						Amount = 5,
+					}, {
+						Name = "Fallen Giant",
+						Delay = 0.6,
+						Amount = 8,
+						Attributes = {
+							["Nimble"] = true,
+						},
+					}, {
+						Name = "Health Cultist",
+						Delay = 0.6,
+						Amount = 1,
+					}, {
+						Name = "Fallen Angel",
+						Delay = 0.6,
+						Amount = 3,
+					}, {
+						Name = "Necromancer Boss",
+						Delay = 4,
+						Amount = 3,
+					}, {
+						Name = "Awakened Fallen",
+						Delay = 3,
+						Amount = 5,
+					}, {
+						Name = "Reanimator",
+						Delay = 1,
+						Time = 10,
+						Amount = 1,
+					},},
+			},
+		},{
+			Music = "Hardcore",
+			WaveLength = 9999,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Breaker5",
+					Delay = 0.5,
+					Amount = 8,
+				}, {
+						Name = "Gold Guard",
+						Delay = 1.5,
+						Amount = 3,
+					}, {
+						Name = "Fallen Hero",
+						Delay = 0.5,
+						Amount = 11,
+					}, {
+						Name = "24 Karat",
+						Delay = 0.5,
+						Amount = 6,
+					}, {
+						Name = "Golden Invader",
+						Delay = 0.5,
+						Amount = 6,
+					},{
+						Name = "Mega Slow",
+						Delay = 0.8,
+						Amount = 10,
+					},{
+						Name = "Health Cultist",
+						Delay = 0.5,
+						Amount = 1,
+						Attributes = {
+							["Slowness"] = true,
+						},
+					},{
+						Name = "Slow King",
+						Delay = 1,
+						Amount = 4,
+					}, {
+						Name = "Fallen Courier",
+						Delay = 0.5,
+						Amount = 5,
+						Attributes = {
+							["Nimble"] = true,
+						},
+					}, {
+						Name = "Giant Boss",
+						Delay = 0.6,
+						Amount = 4,
+					}, {
+						Name = "Fallen Guardian",
+						Delay = 0.5,
+						Amount = 2,
+					},{
+						Name = "Circuit",
+						Delay = 1.5,
+						Amount = 3,
+					},{
+						Name = "Soul",
+						Delay = 0.5,
+						Amount = 4,
+					}, {
+						Name = "Golden Mechanic",
+						Delay = 1,
+						Amount = 5,
+					}, {
+						Name = "Golden Executioner",
+						Delay = 2,
+						Amount = 3,
+					},{
+						Name = "Circuit",
+						Delay = 1.5,
+						Amount = 1,
+					},{
+						Name = "Fallen Hero",
+						Delay = 1.5,
+						Amount = 6,
+					}, {
+						Name = "Fallen Courier",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Fallen Guardian",
+						Delay = 0.5,
+						Amount = 2,
+					},{
+						Name = "Soul Stealer",
+						Delay = 1.5,
+						Amount = 8,
+						Attributes = {
+							["Nimble"] = true,
+							["Chance"] = 50,
+						},
+					}, {
+						Name = "Unknown",
+						Delay = 0.5,
+						Amount = 2,
+					}, {
+						Name = "Vindicator",
+						Delay = 0.5,
+						Amount = 1,
+					}, {
+						Name = "Breaker5",
+						Delay = 0.5,
+						Amount = 7,
+					}, {
+						Name = "Fallen Giant",
+						Delay = 0.6,
+						Amount = 3,
+					}, {
+						Name = "Reanimator",
+						Delay = 4,
+						Amount = 2,
+					}, {
+						Name = "Void Reaver",
+						Delay = 1,
+						Amount = 1,
+						Time = 5,
+					},{
+						Name = "Breaker5",
+						Delay = 0.5,
+						Amount = 1,
+					}},
+			},
+		},
+	},
+}

@@ -1,0 +1,1216 @@
+return {
+	ExtraOptions = {
+		TimingMode = "Relative",
+		EcoScale = 0.1,
+		WaveCash = function(wave) 
+			return 355 + ( (wave - 1) * 60) ^ 1.06 --(125) + (50 * wave - 35)
+		end,
+		StartingCash = {	
+			GroupBonus = true,
+			Counts = {600, 500, 450, 400}
+		}
+	},
+	Waves = {{
+        ---wave 1
+		Music = "Synthesia",
+		WaveLength = 30,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Abnormal",
+				Delay = 0.5,
+				Amount = 4,
+			}},
+		},
+	}, {
+        ---wave 2
+		WaveLength = 30,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Abnormal",
+				Delay = 0.5,
+				Amount = 5,
+			}},
+		},
+	}, {
+        ---wave 3
+		WaveLength = 30,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Abnormal",
+				Delay = 0.5,
+				Amount = 8,
+			}},
+		},
+	}, {
+        ---wave 4
+		WaveLength = 30,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Quick",
+				Delay = 0.5,
+				Amount = 5,
+			}},
+		},
+	}, {
+        ---wave 5
+		WaveLength = 30,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Heavy",
+				Delay = 1,
+				Amount = 3,
+            }, {
+				Name = "Quick",
+				Delay = 0.4,
+				Amount = 6,
+			}},
+		},
+	}, {
+        ---wave 6
+		WaveLength = 30,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Abnormal",
+				Delay = 0.5,
+				Amount = 4,
+			}, {
+				Name = "Quick",
+				Delay = 0.5,
+				Amount = 6,
+				Time = 3,
+			}},
+		},
+	}, {
+        ---wave 7
+		WaveLength = 30,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Heavy",
+				Delay = 0.75,
+				Amount = 4,
+			}, {
+				Name = "Abnormal",
+				Delay = 0.4,
+				Amount = 7,
+			}, {
+				Name = "Quick",
+				Delay = 0.3,
+				Amount = 3,
+            }, {
+				Name = "Abnormal Boss",
+				Delay = 0.6,
+				Amount = 1,
+				Attributes = {
+					["Boss"] = true,
+				},
+			}},
+		},
+	}, {
+        ---wave 8
+		WaveLength = 30,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Quick",
+				Delay = 0.6,
+				Amount = 5,
+			}, {
+				Name = "Abnormal",
+				Delay = 0.6,
+				Amount = 6,
+				Attributes = {
+					["Nimble"] = true,
+					["Chance"] = 50, -- Set this between 1 and 100
+                }
+			}, {
+				Name = "Heavy",
+				Delay = 0.6,
+				Amount = 9,
+				},
+			}},
+		},
+	}, {
+        ---wave 9
+		WaveLength = 30,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Heavy",
+				Delay = 0.6,
+				Amount = 4,
+                Attributes = {
+					["Bloated"] = true,
+                }
+			}, {
+				Name = "Abnormal",
+				Delay = 0.5,
+				Amount = 5,
+			}, {
+				Name = "Quick",
+				Delay = 0.3,
+				Amount = 7,
+				Attributes = {
+					["Nimble"] = true,
+					["Chance"] = 25, -- Set this between 1 and 100
+				},
+            }, {
+				Name = "Shadow",
+				Delay = 0.4,
+				Amount = 3,
+			}},
+		},
+	}, {
+        ---wave 10
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Abnormal",
+				Delay = 0.3,
+				Amount = 11,
+			}, {
+				Name = "Heavy",
+				Delay = 0.7,
+				Amount = 3,
+			}, {
+				Name = "Golden",
+				Delay = 0.6,
+				Amount = 1,
+			}},
+		},
+	}, {
+        ---wave 11
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Heavy",
+				Delay = 0.65,
+				Amount = 9,
+			}, {
+				Name = "Abnormal",
+				Delay = 0.4,
+				Amount = 8,
+			}, {
+				Name = "Quick",
+				Delay = 0.4,
+				Amount = 8,
+            }, {
+				Name = "Shadow",
+				Delay = 0.65,
+				Amount = 12,
+			}},
+		},
+	}, {
+        ---wave 12
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Abnormal Boss",
+				Delay = 0.5,
+				Amount = 2,
+			}, {
+				Name = "Golden",
+				Delay = 0.5,
+				Amount = 1,
+			}},
+		},
+	}, {
+        ---wave 13
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Breaker2",
+				Delay = 0.6,
+				Amount = 4,
+            }, {
+				Name = "Heavy",
+				Delay = 0.3,
+				Amount = 7,
+			}},
+		},
+	}, {
+        ---wave 14
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Shadow",
+				Delay = 0.45,
+				Amount = 15,
+            }, {
+				Name = "Prisoned Shadow",
+				Delay = 0.6,
+				Amount = 5,
+			}, {
+				Name = "Golden",
+				Delay = 1,
+				Amount = 2,
+			}},
+		},
+	}, {
+        ---wave 15
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Breaker2",
+				Delay = 0.5,
+				Amount = 6,
+            }, {
+				Name = "Abnormal Boss",
+				Delay = 0.7,
+				Amount = 3,
+			}},
+		},
+	}, {
+        ---wave 16
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Breaker2",
+				Delay = 0.5,
+				Amount = 4,
+			}, {
+				Name = "Golden",
+				Delay = 0.5,
+				Amount = 2,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 1,
+				Amount = 1,
+                Attributes = {
+					["Bloated"] = true,
+					["Boss"] = true
+				},
+			}},
+		},
+	}, {
+        ---wave 17
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Heavy",
+				Delay = 0.1,
+				Amount = 10,
+			}, {
+				Name = "Breaker2",
+				Delay = 0.6,
+				Amount = 4,
+			}, {
+				Name = "Golden",
+				Delay = 0.5,
+				Amount = 3,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 1.2,
+				Amount = 2,
+				Attributes = {
+					["Nimble"] = true,
+				},
+			}, {
+				Name = "Headless Hazard",
+				Delay = 0.8,
+				Amount = 2,
+			}},
+		},
+	}, {
+        ---wave 18
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Breaker2",
+				Delay = 0.6,
+				Amount = 20,
+			}, {
+				Name = "Abnormal Boss",
+				Delay = 1.1,
+				Amount = 4,
+                Attributes = {
+                    ["Bloated"] = true
+					["HealthRegen"] = true,
+                },
+			}, {
+				Name = "Golden",
+				Delay = 0.5,
+				Amount = 5,
+				Attributes = {
+					["Nimble"] = true,
+					["Chance"] = 30
+				},
+			}},
+		},
+	}, {
+        ---wave 19
+		WaveLength = 45,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Breaker2",
+				Delay = 0.15,
+				Amount = 5,
+			}, {
+				Name = "Shadow",
+				Delay = 0.2,
+				Amount = 12,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 0.3,
+				Amount = 2,
+                Attributes = {
+					["Nimble"] = true,
+				},
+			}, {
+				Name = "Abnormal Boss",
+				Delay = 0.12,
+				Amount = 4,
+			}, {
+				Name = "Headless Hazard",
+				Delay = 0.15,
+				Amount = 5,
+			}, {
+				Name = "Golden",
+				Delay = 0.2,
+				Amount = 4,
+			}},
+		},
+	}, {
+        ---wave 20
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Breaker3",
+				Delay = 0.8,
+				Amount = 3,
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 1.5,
+				Amount = 1,
+                Attributes = {
+					["Boss"] = true
+				},
+			}, {
+				Name = "Headless Hazard",
+				Delay = 0.5,
+				Amount = 8,
+			}, {
+				Name = "Abnormal Boss",
+				Delay = 0.4,
+				Amount = 6,
+			}},
+		},
+	}, {
+        ---wave 21
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Breaker3",
+				Delay = 0.5,
+				Amount = 4,
+			}, {
+				Name = "Golden",
+				Delay = 0.5,
+				Amount = 12,
+			}, {
+				Name = "Abnormal Boss",
+				Delay = 0.7,
+				Amount = 5,
+                Attributes = {
+					["Bloated"] = true,
+					["HealthRegen"] = true,
+				},
+			}, {
+				Name = "Heavy",
+				Delay = 0.1,
+				Amount = 10,
+			}, {
+				Name = "Shadow",
+				Delay = 0.3,
+				Amount = 8,
+			}, {
+				Name = "Shadow Boss",
+				Delay = 1,
+				Amount = 1,
+			}},
+		},
+	}, {
+        ---wave 22
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Heavy",
+				Delay = 0.3,
+				Amount = 8,
+			}, {
+				Name = "Charged",
+				Delay = 0.4,
+				Amount = 5,
+			}, {
+				Name = "Golden",
+				Delay = 0.4,
+				Amount = 5,
+			}, {
+				Name = "Breaker2",
+				Delay = 0.3,
+				Amount = 8,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 0.8,
+				Amount = 3,
+                Attributes = {
+					["Bloated"] = true,
+					["HealthRegen"] = true,
+				},
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 0.5,
+				Amount = 1,
+			}, {
+				Name = "Chained Boss",
+				Delay = 1.5,
+				Amount = 1,
+				Attributes = {
+					["Boss"] = true,
+				},
+			}, {
+				Name = "Shadow",
+				Delay = 0.2,
+				Amount = 9,
+			}, {
+				Name = "Headless Hazard",
+				Delay = 0.3,
+				Amount = 8,
+				Attributes = {
+					["Nimble"] = true
+				},
+			}},
+		},
+	}, {
+        ---wave 23
+		Music = "Liminal Oblivion",
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Charged",
+				Delay = 0.5,
+				Amount = 4,
+			}, {
+				Name = "Breaker2",
+				Delay = 0.4,
+				Amount = 6,
+			}, {
+				Name = "Headless Hazard",
+				Delay = 0.25,
+				Amount = 8,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 0.5,
+				Amount = 2,
+				Attributes = {
+					["Hidden"] = true
+				},
+			}, {
+				Name = "Breaker3",
+				Delay = 0.5,
+				Amount = 5,
+			}, {
+				Name = "Golden",
+				Delay = 0.5,
+				Amount = 8,
+				Attributes = {
+					["Hidden"] = true
+				},
+			}, {
+				Name = "Shadow",
+				Delay = 0.45,
+				Amount = 7 ,
+			}, {
+				Name = "Shadow Boss",
+				Delay = 0.5,
+				Amount = 1,
+			}},
+		},
+	}, {
+        ---wave 24
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+			}, {
+				Name = "Heavy",
+				Delay = 0.3,
+				Amount = 12,
+				Attributes = {
+					["Bloated"] = true,
+					Nimble = true
+				},
+			}, {
+				Name = "Breaker3",
+				Delay = 0.4,
+				Amount = 4,
+			}, {
+				Name = "Headless Hazard",
+				Delay = 0.3,
+				Amount = 6,
+			}, {
+				Name = "Golden",
+				Delay = 0.4,
+				Amount = 9,
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.5,
+				Amount = 2,
+			}, {
+				Name = "Charged",
+				Delay = 0.3,
+				Amount = 7,
+			}, {
+				Name = "Shadow Boss",
+				Delay = 1.25,
+				Amount = 2,
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 0.5,
+				Amount = 1,
+			}, {
+				Name = "Headless Hazard",
+				Delay = 0.5,
+				Amount = 7,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 0.65,
+				Amount = 5,
+			}, {
+				Name = "Chained Boss",
+				Delay = 1.5,
+				Amount = 1,
+			}},
+		},
+	}, {
+        ---wave 25
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Chained Boss",
+				Delay = 1,
+				Amount = 2,
+				Attributes = {
+					["Bloated"] = true,
+				},
+			}, {
+				Name = "Breaker3",
+				Delay = 0.5,
+				Amount = 5,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 0.6,
+				Amount = 4,
+				Attributes = {
+					["Bloated"] = true,
+					Hidden = true,
+				},
+			}, {
+				Name = "Golden",
+				Delay = 0.3,
+				Amount = 6,
+			}, {
+				Name = "Chained Boss",
+				Delay = 2,
+				Amount = 2,
+			}, {
+				Name = "Charged",
+				Delay = 0.25,
+				Amount = 10,
+			}, {
+				Name = "Speedy Boss",
+				Delay = 2.5,
+				Amount = 1,
+				Attributes = {
+					Boss = true,
+				}
+			}},
+		},
+	}, {
+        ---wave 26
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Charged",
+				Delay = 0.35,
+				Amount = 12,
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 0.5,
+				Amount = 2,
+			}, {
+				Name = "Shadow Boss",
+				Delay = 0.85,
+				Amount = 4,
+			}, {
+				Name = "Golden",
+				Delay = 0.35,
+				Amount = 6,
+			}, {
+				Name = "24 Karat",
+				Delay = 0.65,
+				Amount = 2,
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.5,
+				Amount = 3,
+			}, {
+				Name = "Headless Hazard",
+				Delay = 0.3,
+				Amount = 15,
+			}, {
+				Name = "Chained Boss",
+				Delay = 1.75,
+				Amount = 2,
+			}, {
+				Name = "Breaker4",
+				Delay = 0.5,
+				Amount = 3,
+			}},
+		},
+	}, {
+        ---wave 27
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Charged",
+				Delay = 0.1,
+				Amount = 10,
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 1.75,
+				Amount = 2,
+			}, {
+				Name = "Golden",
+				Delay = 0.6,
+				Amount = 16,
+				Attributes = {
+					Hidden = true,
+					Nimble = true,
+					Chance = 50
+				}
+			}, {
+				Name = "Chained Boss",
+				Delay = 1.8,
+				Amount = 2,
+			}, {
+				Name = "Breaker3",
+				Delay = 0.4,
+				Amount = 5,
+			}, {
+				Name = "Abnormal Boss",
+				Delay = 0.3,
+				Amount = 8,
+			}, {
+				Name = "Speedy Boss",
+				Delay = 1.5,
+				Amount = 2,
+			}},
+		},
+	}, {
+        ---wave 28
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Hazard",
+				Delay = 0.6,
+				Amount = 5,
+			}, {
+				Name = "Headless Hazard",
+				Delay = 0.35,
+				Amount = 8,
+			}, {
+				Name = "Chained Boss",
+				Delay = 0.9,
+				Amount = 2,
+				Attributes = {
+					["Nimble"] = true,
+				}
+			}, {
+				Name = "Breaker4",
+				Delay = 0.4,
+				Amount = 5,
+			}, {
+				Name = "Speedy Boss",
+				Delay = 0.8,
+				Amount = 2,
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.4,
+				Amount = 3,
+				Attributes = {
+					["Nimble"] = true,
+				}
+			}, {
+				Name = "Golden",
+				Delay = 1.2,
+				Amount = 5,
+			}, {
+				Name = "Charged",
+				Delay = 0.25,
+				Amount = 9,
+			}, {
+				Name = "Tank",
+				Delay = 0.5,
+				Amount = 1,
+				Attributes = {
+					["Boss"] = true,
+				}
+			}},
+		},
+	}, {
+        ---wave 29
+		WaveLength = 60,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Chained Boss",
+				Delay = 0.8,
+				Amount = 6,
+			}, {
+				Name = "Breaker2",
+				Delay = 0.45,
+				Amount = 10,
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 1.5,
+				Amount = 2,
+			}, {
+				Name = "Charged",
+				Delay = 0.4,
+				Amount = 12,
+			}, {
+				Name = "24 Karat",
+				Delay = 0.65,
+				Amount = 6,
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.5,
+				Amount = 4,
+			}, {
+				Name = "Hazard",
+				Delay = 0.45,
+				Amount = 10,
+			}},
+		},
+	}, {
+        ---wave 30
+		WaveLength = 80,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Golden",
+				Delay = 0.5,
+				Amount = 5,
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.5,
+				Amount = 1,
+			}, {
+				Name = "Chained Boss",
+				Delay = 0.5,
+				Amount = 3,
+			}, {
+				Name = "Hazard",
+				Delay = 0.5,
+				Amount = 3,
+			}, {
+				Name = "Abnormal Boss",
+				Delay = 0.5,
+				Amount = 4,
+			}, {
+				Name = "Shadow Boss",
+				Delay = 0.3,
+				Amount = 4,
+			}, {
+				Name = "Breaker3",
+				Delay = 0.4,
+				Amount = 8,
+				Attributes = {
+					Hidden = true,
+					Chance = 60
+				}
+			}, {
+				Name = "Charged",
+				Delay = 0.4,
+				Amount = 12,
+				Attributes = {
+					Bloated = true,
+					Nimble = true,
+					Chance = 25
+				}
+			}, {
+				Name = "Speedy Boss",
+				Delay = 2.5,
+				Amount = 2,
+			}, {
+				Name = "Breaker4",
+				Delay = 0.4,
+				Amount = 6,
+			}, {
+				Name = "Hazard",
+				Delay = 0.4,
+				Amount = 15,
+				Attributes = {
+					Nimble = true,
+					Chance = 50
+				}
+			}, {
+				Name = "Tank",
+				Delay = 4.5,
+				Amount = 1,
+			}, {
+				Name = "24 Karat",
+				Delay = 1,
+				Amount = 4,
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.15,
+				Amount = 3,
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 3,
+				Amount = 2,
+			}, {
+				Name = "Golden Executioner",
+				Delay = 1,
+				Amount = 1,
+				Attributes = {
+					Boss = true,
+					},
+				},
+			}},
+		},
+	}, {
+        ---wave 31
+		WaveLength = 80,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Chained Boss",
+				Delay = 1.5,
+				Amount = 8,
+					Attributes = {
+						["Nimble"] = true,
+						["Chance"] = 75,
+					},
+			}, {
+				Name = "Hazard",
+				Delay = 0.4,
+				Amount = 15,
+			}, {
+				Name = "Golden",
+				Delay = 0.3,
+				Amount = 10,
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 2.5,
+				Amount = 2,
+			}, {
+				Name = "Breaker3",
+				Delay = 0.4,
+				Amount = 5,
+			}, {
+				Name = "Breaker4",
+				Delay = 0.5,
+				Amount = 6,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 0.3,
+				Amount = 6,
+			}, {
+				Name = "Summoner Boss",
+				Delay = 4.5,
+				Amount = 1,
+				Attributes = { 
+					Boss = true 
+				},
+			}, {
+				Name = "Tank",
+				Delay = 2,
+				Amount = 1,
+			}},
+		},
+	}, {
+        ---wave 32
+		WaveLength = 80,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Chained Boss",
+				Delay = 0.8,
+				Amount = 8,
+			}, {
+				Name = "Breaker2",
+				Delay = 0.5,
+				Amount = 8,
+			}, {
+				Name = "Charged",
+				Delay = 0.4,
+				Amount = 12,
+			}, {
+				Name = "Giant Boss",
+				Delay = 1.2,
+				Amount = 5,
+			}, {
+				Name = "Speedy Boss",
+				Delay = 1.2,
+				Amount = 4,
+			}, {
+				Name = "Breaker4",
+				Delay = 0.4,
+				Amount = 8,
+			}, {
+				Name = "Golden",
+				Delay = 0.2,
+				Amount = 10,
+				Attributes = {
+					["Bloated"] = true,
+					["Nimble"] = true,
+					["Chance"] = 60,
+				},
+			}, {
+				Name = "Tank",
+				Delay = 1.5,
+				Amount = 1,
+				Attributes = {
+					["Bloated"] = true,
+				},
+			}, {
+				Name = "Charged",
+				Delay = 0.8,
+				Amount = 8,
+			}, {
+				Name = "Tank",
+				Delay = 0.5,
+				Amount = 1,
+				Attributes = {
+					["Nimble"] = true,
+				},
+			}},
+		},
+	}, {
+        ---wave 33
+		WaveLength = 80,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Chained Boss",
+				Delay = 1.25,
+				Amount = 6,
+				Attributes = {
+					["Nimble"] = true,
+					["Chance"] = 50,
+				},
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 0.4,
+				Amount = 3,
+			}, {
+				Name = "Charged",
+				Delay = 0.2,
+				Amount = 10,
+				Attributes = {
+					["Bloated"] = true,
+					Nimble = true,
+				},
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.4,
+				Amount = 8,
+			}, {
+				Name = "Breaker2",
+				Delay = 0.5,
+				Amount = 10,
+			}, {
+				Name = "Breaker4",
+				Delay = 0.8,
+				Amount = 7,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 0.8,
+				Amount = 1,
+			}, {
+				Name = "Shadow Boss",
+				Delay = 1,
+				Amount = 4,
+			}, {
+				Name = "24 Karat",
+				Delay = 0.5,
+				Amount = 5,
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.5,
+				Amount = 8,
+			}},
+		},
+	}, {
+        ---wave 34
+		WaveLength = 120,
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Chained Boss",
+				Delay = 1,
+				Amount = 6,
+				Attributes = {
+					["Nimble"] = true,
+					["Chance"] = 50,
+				},
+			}, {
+				Name = "Boomer",
+				Delay = 1,
+				Amount = 3,
+			}, {
+				Name = "Gold Guard",
+				Delay = 1.5,
+				Amount = 2,
+			}, {
+				Name = "Charged",
+				Delay = 0.5,
+				Amount = 15,
+				Attributes = {
+					["Hidden"] = true,
+					["Bloated"] = true,
+					["Chance"] = 80,
+				},
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.4,
+				Amount = 5,
+			}, {
+				Name = "Golden",
+				Delay = 0.3,
+				Amount = 10,
+				Attributes = {
+					["Hidden"] = true,
+					["Bloated"] = true,
+					["Chance"] = 60,
+				},
+			}, {
+				Name = "Summoner Boss",
+				Delay = 2.5,
+				Amount = 1,
+			}, {
+				Name = "Breaker2",
+				Delay = 0.5,
+				Amount = 6,
+			}, {
+				Name = "Hazard",
+				Delay = 0.5,
+				Amount = 6,
+			}, {
+				Name = "Golden",
+				Delay = 0.5,
+				Amount = 8,
+			}, {
+				Name = "Breaker4",
+				Delay = 0.8,
+				Amount = 8,
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.5,
+				Amount = 8,
+			}, {
+				Name = "24 Karat",
+				Delay = 0.9,
+				Amount = 6,
+				Attributes = {
+						Nimble = true,
+						["Chance"] = 75,
+					},
+				}, {
+				Name = "Golden Executioner",
+				Delay = 1.5,
+				Amount = 1,
+				Attributes = {
+					Nimble = true
+				},	
+				}
+			}},
+ 	}, {
+        ---wave 35
+			Music = "Gold Titan",
+			WaveLength = 100000,
+			WaitFor = "Golden Executioner",
+		WaveTimeline = {
+			Enemies = {{
+				Name = "Breaker4",
+				Delay = 0.4,
+				Amount = 8,
+			}, {
+				Name = "Tank",
+				Delay = 1,
+				Amount = 1,
+				Attributes = {
+					["Bloated"] = true,
+				},
+			}, {
+				Name = "Golden Invader",
+				Delay = 0.4,
+				Amount = 8,
+			}, {
+				Name = "Giant Boss",
+				Delay = 0.75,
+				Amount = 4,
+			}, {
+				Name = "Gold Guard",
+				Delay = 1.75,
+				Amount = 1,
+			}, {
+				Name = "Charged",
+				Delay = 0.3,
+				Amount = 12,
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 1.2,
+				Amount = 4,
+			}, {
+				Name = "Dark Necromancer",
+				Delay = 0.5,
+				Amount = 8,
+			}, {
+				Name = "Summoner Boss",
+				Delay = 2.5,
+				Amount = 1,
+				Attributes = {
+					["Bloated"] = true,
+				},
+			}, {
+				Name = "Hazard",
+				Delay = 0.5,
+				Amount = 6,
+			}, {
+				Name = "Golden Executioner",
+				Delay = 2,
+				Amount = 1,
+				Attributes = {
+					["Bloated"] = true,
+				},
+			}, {
+				Name = "Breaker4",
+				Delay = 0.4,
+				Amount = 12,
+			}, {
+				Name = "Slow Boss",
+				Delay = 1.1,
+				Amount = 2,
+			}, {
+				Name = "Golden",
+				Delay = 0.2,
+				Amount = 8,
+			}, {
+				Name = "24 Karat",
+				Delay = 0.35,
+				Amount = 8,
+			}, {
+				Name = "Golden Mechanic",
+				Delay = 1.25,
+				Amount = 4,
+			}, {
+				Name = "Gold Guard",
+				Delay = 1.5,
+				Amount = 3,
+			}, {
+				Name = "Golden Executioner",
+				Delay = 4,
+				Amount = 1,
+			}, {
+				Name = "Gold Titan",
+				Delay = 1.5,
+				Amount = 1,
+			},
+				}},
+			},
+	}
+}

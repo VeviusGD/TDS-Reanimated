@@ -1,0 +1,860 @@
+return {
+	ExtraOptions = {
+		TimingMode = "Relative",
+		EcoScale = 0.1,
+		WaveCash = function(wave)
+			return (400) + (200 * wave - 1)
+		end,
+		StartingCash = {
+			GroupBonus = true,
+			Counts = {600, 500, 450, 400}
+		}
+	},
+        Waves = {{
+		    Music = "Winter Fall",
+		    WaveLength = 60,
+		    WaveTimeline = {
+			    Enemies = {{ --WAVE 1
+			    	Name = "Snowy",
+			    	Delay = 0.6,
+			    	Amount = 10,
+			    }},
+		    },
+	    }, {
+		    WaveLength = 60,
+		    WaveTimeline = {
+				Enemies = {{ --WAVE 2
+					Name = "Snowy",
+					Delay = 0.6,
+					Amount = 14,
+				}, {
+					Name = "Frozen",
+					Delay = 0.45,
+					Amount = 4,
+			    }},
+		    },
+	    }, {
+		    WaveLength = 60,
+			WaveTimeline = { --WAVE 3
+			    Enemies = {{
+    				Name = "Frozen",
+	    			Delay = 0.45,
+		    		Amount = 12,
+			    },{
+					Name = "Snowy",
+					Delay = 0.6,
+					Amount = 12,
+		    	}},
+	    	},
+    	}, {
+		    WaveLength = 60,
+			WaveTimeline = {  --WAVE 4
+			    Enemies = {{
+					Name = "Packed Ice",
+					Delay = 2.75,
+					Amount = 1,
+					Attributes = {
+						["Boss"] = true
+					},
+			    }, {
+				    Name = "Frozen",
+				    Delay = 0.45,
+				    Amount = 7,
+				}, {
+					Name = "Snowy",
+					Delay = 0.6,
+					Amount = 7,
+				}, {
+					Name = "Frozen",
+					Delay = 0.45,
+					Amount = 5,
+					Attributes = {
+						["Bloated"] = true,
+					},
+				}},
+		    },
+	    }, {
+		    WaveLength = 60,
+		    WaveTimeline = {
+				Enemies = {{ --WAVE 5
+                    Name = "Frozen",
+					Delay = 0.5,
+					Amount = 10,
+				}, {
+				    Name = "Snowy",
+				    Delay = 0.35,
+				    Amount = 8,
+				}, {
+					Name = "Cold Mist",
+					Delay = 0.65,
+					Amount = 3,
+				}, {
+					Name = "Packed Ice",
+					Delay = 0.85,
+					Amount = 2,
+			    }},
+		    },
+	    }, {
+			WaveLength = 60, --WAVE 6
+		    WaveTimeline = {
+			    Enemies = {{
+				    Name = "Snowy",
+				    Delay = 0.6,
+				    Amount = 10,
+			    }, {
+			    	Name = "Cold Mist",
+			    	Delay = 0.6,
+			    	Amount = 3,
+			    }, {
+			    	Name = "Cold Mist",
+			    	Delay = 0.75,
+			    	Amount = 2,
+                    Attributes = {
+						["Bloated"] = true
+					},
+			    }, {
+			    	Name = "Packed Ice",
+			    	Delay = 0.85,
+			    	Amount = 4,
+			    }, {
+				    Name = "Frozen",
+    				Delay = 0.25,
+	    			Amount = 12,
+		    		Attributes = {
+                        ["Bloated"] = true,
+						["Nimble"] = true
+			    	},
+			    }},
+		    },
+    	}, {
+			WaveLength = 60, --WAVE 7
+		    WaveTimeline = {
+			    Enemies = {{
+				    Name = "Packed Ice",
+				    Delay = 0.6,
+				    Amount = 3,
+			    },{
+	    			Name = "Frozen",
+    				Delay = 0.6,
+	    			Amount = 7,
+		    	}, {
+		    		Name = "Cold Mist",
+		    		Delay = 0.5,
+			    	Amount = 2,
+		    	}, {
+	    			Name = "Packed Ice",
+    				Delay = 0.5,
+    				Amount = 3,
+    				Attributes = {
+    					["Nimble"] = true,
+    					Chance = 30
+	    			},
+	    		}, {
+	    			Name = "Frozen",
+	    			Delay = 0.5,
+	    			Amount = 7,
+	    			Attributes = {
+						["Bloated"] = true
+    				},
+    			}, {
+    				Name = "Snowy",
+    				Delay = 0.5,
+    				Amount = 5,
+    				Attributes = {
+    					["Bloated"] = true
+    				},
+    			}},
+    		},
+    	}, {
+			WaveLength = 60, --WAVE 8
+    		WaveTimeline = {
+    			Enemies = {{
+    				Name = "Packed Ice",
+    				Delay = 0.85,
+    				Amount = 7,
+			    }, {
+			    	Name = "Snowy Minion",
+			    	Delay = 0.3,
+			    	Amount = 4,
+    			}, {
+    				Name = "Cold Mist",
+	    			Delay = 0.4,
+				    Amount = 9,
+    			}, {
+    				Name = "Snowy",
+	    			Delay = 0.25,
+	    			Amount = 10,
+	    		}, {
+	    			Name = "Packed Ice",
+	    			Delay = 0.1,
+	    			Amount = 3,
+	    		}, {
+	    			Name = "Frozen",
+	    			Delay = 0.4,
+	    			Amount = 10,
+	    		}, {
+	    			Name = "Packed Ice",
+	    			Delay = 0.7,
+    				Amount = 4,
+    				Attributes = {
+						["Bloated"] = true
+	    			},
+		    	}},
+    		},
+	    }, {
+			WaveLength = 60, --WAVE 9
+		    WaveTimeline = {
+			    Enemies = {{
+			    	Name = "Cold Mist",
+			    	Delay = 0.9,
+	    			Amount = 20,
+	    		}, {
+	    			Name = "Frozen",
+	    			Delay = 0.15,
+	    			Amount = 12,
+	    		}, {
+	    			Name = "Snowy",
+	    			Delay = 0.35,
+	    			Amount = 8,
+	    			Attributes = {
+	    				["Bloated"] = true
+	    			},
+                }, {
+			    	Name = "Snowy Golem",
+			    	Delay = 1.5,
+			    	Amount = 1,
+			    	Attributes = {
+			    		["Boss"] = true
+			    	},
+	    		}},
+	    	},
+	    }, {
+			WaveLength = 60, --WAVE 10
+		    WaveTimeline = {
+		    	Enemies = {{
+	    			Name = "Frost Mystery",
+	    			Delay = 0.75,
+	    			Amount = 10,
+                }, {
+		    		Name = "Frozen",
+		    		Delay = 0.4,
+		    		Amount = 6,
+		    		Attributes = {
+		    			["Bloated"] = true,
+		    			["Nimble"] = true,
+		    		},
+			    }, {
+			    	Name = "Cold Mist",
+			    	Delay = 0.6, 
+			    	Amount = 2,
+			    }, {
+			    	Name = "Packed Ice",
+			    	Delay = 0.5,
+			    	Amount = 6,
+			    	Attributes = {
+						["Bloated"] = true,
+						["Nimble"] = true,
+			    	},
+			    }, {
+			    	Name = "Snowy Golem",
+			    	Delay = 1.5,
+			    	Amount = 2,
+			    }, {
+			    	Name = "Unstable Ice",
+			    	Delay = 0.85,
+			    	Amount = 1,
+			    }, {
+			    	Name = "Packed Ice",
+			    	Delay = 0.8,
+			    	Amount = 3,
+                    Attributes = {
+                        ["Hidden"] = true
+                    },
+			    }},
+		    },
+	    }, {
+			WaveLength = 60, --WAVE 11
+		    WaveTimeline = {
+			    Enemies = {{
+			    	Name = "Snow Golem",
+			    	Delay = 0.8,
+			    	Amount = 5,
+			    	Attributes = {
+			    		["Nimble"] = true,
+			    		["Chance"] = 20
+			    	},
+			    }, {
+				    Name = "Packed Ice",
+				    Delay = 1,
+				    Amount = 15,
+			    }, {
+				    Name = "Unstable Ice",
+				    Delay = 0.8,
+				    Amount = 3,
+				    Attributes = {
+				    	["Hidden"] = true,
+				    	["Chance"] = 30
+				    },
+			    }, {
+			    	Name = "Breaker3",
+			    	Delay = 0.8,
+			    	Amount = 2,
+			    }, {
+			    	Name = "Packed Ice",
+			    	Delay = 0.25,
+			    	Amount = 4,
+			    	Attributes = {
+			    		["Nimble"] = true,	
+			    	},
+			    }, {
+			    	Name = "Cold Mist",
+			    	Delay = 1.2,
+			    	Amount = 6,
+			    }, {
+			    	Name = "Crying Angel",
+			    	Delay = 0.5,
+			    	Amount = 1,
+			    }},
+		    },
+		}, {
+			WaveLength = 60, --WAVE 12
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Frost Mystery",
+					Delay = 0.5,
+					Amount = 7,
+				}, {
+					Name = "Frozen",
+					Delay = 0.4,
+					Amount = 8,
+					Attributes = {
+						["Nimble"] = true,
+						Bloated = true
+					},
+				}, {
+					Name = "Snow Golem",
+					Delay = 2,
+					Amount = 3,
+				}, {
+					Name = "Cold Mist",
+					Delay = 0.5,
+					Amount = 4,
+					Attributes = {
+						["Nimble"] = true,
+						["Bloated"] = true
+					},
+				}, {
+					Name = "Packed Ice",
+					Delay = 0.5,
+					Amount = 4,
+				}, {
+					Name = "Breaker3",
+					Delay = 0.8,
+					Amount = 2,
+					Attributes = {
+						["Nimble"] = true,
+					},
+				}, {
+					Name = "Unstable Ice",
+					Delay = 0.7,
+					Amount = 2,
+				},{
+					Name = "Deep Freeze",
+					Delay = 1,
+					Amount = 1,
+					Attributes = {
+						["Boss"] = true,
+					},
+				}},
+			},
+		}, {
+			WaveLength = 60, --WAVE 13
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Cold Mist",
+					Delay = 0.2,
+					Amount = 6,
+				},{
+					Name = "Unstable Ice",
+					Delay = 0.8,
+					Amount = 4,
+				},{
+					Name = "Gingerbread",
+					Delay = 0.5,
+					Amount = 1,
+				}, {
+					Name = "Unstable Ice",
+					Delay = 0.2,
+					Amount = 1,
+					Attributes = {
+						["Hidden"] = true
+					},
+				},{
+					Name = "Packed Ice",
+					Delay = 0.35,
+					Amount = 7,
+				},{
+					Name = "Frost Mystery",
+					Delay = 1,
+					Amount = 8,
+				},{
+					Name = "Snow Minion",
+					Delay = 0.2,
+					Amount = 12,
+				},{
+					Name = "Snow Golem",
+					Delay = 0.2,
+					Amount = 3,
+					Attributes = {
+						["Nimble"] = true,
+						["Durable"] = true,
+					},
+				},{
+					Name = "Deep Freeze",
+					Delay = 3.5,
+					Amount = 3,
+					Attributes = {
+						["Durable"] = true,
+					},
+				},},
+			},
+		}, {
+			WaveLength = 60, --WAVE 14
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Yeti",
+					Delay = 5,
+					Amount = 1,
+					Attributes = {
+						["Boss"] = true
+					},
+				}, {
+					Name = "Crying Angel",
+					Delay = 1.2,
+					Amount = 2,
+				}, {
+					Name = "Gingerbread",
+					Delay = 0.7,
+					Amount = 2,
+					Attributes = {
+						["Hidden"] = true,
+						["Chance"] = 35
+					},
+				}, {
+					Name = "Frost Mystery",
+					Delay = 0.8,
+					Amount = 25,
+				}, {
+					Name = "Deep Freeze",
+					Delay = 3.75,
+					Amount = 3,
+				}, {
+					Name = "Cold Mist",
+					Delay = 0.1,
+					Amount = 15,
+				}, {
+					Name = "Snow Golem",
+					Delay = 0.75,
+					Amount = 5,
+				}},
+			},
+		}, {
+			WaveLength = 60, --WAVE 15
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Frozen",
+					Delay = 0.3,
+					Amount = 8,
+				},{
+					Name = "Snowy",
+					Delay = 0.25,
+					Amount = 8,
+				},{
+					Name = "Gingerbread",
+					Delay = 0.8,
+					Amount = 3,
+				},{
+					Name = "Unstable Ice",
+					Delay = 0.15,
+					Amount = 6,
+				},{
+					Name = "Cold Mist",
+					Delay = 0.2,
+					Amount = 12,
+					Attributes = {
+						["Nimble"] = true,
+						["Bloated"] = true,
+					},
+				}, {
+					Name = "Frost Invader",
+					Delay = 6,
+					Time = 10,
+					Amount = 1,
+					Attributes = {
+						["Hidden"] = true,
+					},
+				},{
+					Name = "Frost Invader",
+					Delay = 6,
+					Amount = 1,
+				},{
+					Name = "Gingerbread",
+					Delay = 1,
+					Amount = 2,
+				}, {
+					Name = "Frozen",
+					Delay = 0.08,
+					Amount = 15,
+				},{
+					Name = "Deep Freeze",
+					Delay = 0.65,
+					Amount = 2,
+				}, {
+					Name = "Crying Angel",
+					Delay = 1,
+					Amount = 3,
+				},{
+					Name = "Frost Ravager",
+					Delay = 1.5,
+					Amount = 1,
+					Attributes = {
+						["Boss"] = true
+						["Slowness"] = true
+					},
+				}},
+			},
+		}, {
+			WaveLength = 60, --WAVE 16
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Packed Ice",
+					Delay = 1,
+					Amount = 6,
+				}, {
+					Name = "Frost Necromancer",
+					Delay = 10,
+					Amount = 1,
+					Attributes = {
+						["Boss"] = true,
+					},
+				},{
+					Name = "Frost Invader",
+					Delay = 1.75,
+					Amount = 5,
+					Attributes = {
+						["Hidden"] = true,
+						["Chance"] = 20
+					},
+				},{
+					Name = "Cold Mist",
+					Delay = 0.1,
+					Amount = 12,
+				},{
+					Name = "Snow Golem",
+					Delay = 0.15,
+					Amount = 6,
+				},{
+					Name = "Crying Angel",
+					Time = 3,
+					Delay = 0.8,
+					Amount = 3,
+					Attributes = {
+						["Hidden"] = true,
+					},
+				},{
+					Name = "Breaker4",
+					Delay = 0.75,
+					Amount = 5,
+				},{
+					Name = "Deep Freeze",
+					Delay = 1,
+					Amount = 5,
+				},{
+					Name = "Snow Golem",
+					Delay = 0.8,
+					Amount = 6,
+					Attributes = {
+						["Hidden"] = true,
+						["Bloated"] = true,
+					},
+				},{
+					Name = "Yeti",
+					Delay = 4,
+					Amount = 1,
+				},},
+			},
+		}, {
+			WaveLength = 60, --WAVE 17
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Frost Ravager",
+					Delay = 6.5,
+					Amount = 2,
+				}, {
+					Name = "Deep Freeze",
+					Delay = 0.3,
+					Time = 2,
+					Amount = 10,
+				}, {
+					Name = "Frost Hero",
+					Delay = 10,
+					Amount = 1,
+					Attributes = {
+						["Boss"] = true,
+						["Durable"] = true,
+					},
+				}, {
+					Name = "Frost Invader",
+					Delay = 1.25,
+					Amount = 6,
+					Attributes = {
+						Bloated = true,
+					},
+				}, {
+					Name = "Frost Ravager",
+					Delay = 6.5,
+					Amount = 3,
+					Attributes = {
+						["Hidden"] = true,
+						["Chance"] = 20
+					},
+				},{
+					Name = "Gingerbread",
+					Delay = 0.7,
+					Amount = 2,
+				},{
+					Name = "Unstable Ice",
+					Delay = 0.5,
+					Amount = 6,
+				},{
+					Name = "Yeti",
+					Delay = 4,
+					Amount = 3,
+				},{
+					Name = "Frost Mystery",
+					Delay = 0.2,
+					Amount = 35,
+				},{
+					Name = "Crying Angel",
+					Delay = 0.3,
+					Amount = 6,
+					Attributes = {
+						["Hidden"] = true,
+						["Chance"] = 50
+					},
+				}},
+			},
+		}, {
+			WaveLength = 60, --WAVE 18
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Frost Invader",
+					Delay = 0.65,
+					Amount = 9,
+					Attributes = {
+						["Strength"] = true,
+					},
+				},{
+					Name = "Frost Ravager",
+					Delay = 2.15,
+					Amount = 3,
+				},{
+					Name = "Frost Mystery",
+					Time = 3,
+					Delay = 0.1,
+					Amount = 20,
+				},{
+					Name = "Unstable Ice",
+					Delay = 0.8,
+					Amount = 5,
+					Attributes = {
+						["Hidden"] = true,
+						["Nimble"] = 20
+					},
+				},{
+					Name = "Crying Angel",
+					Delay = 0.5,
+					Amount = 5,
+					Attributes = {
+						["Strength"] = true,
+						["Bloated"] = true,
+					},
+				},{
+					Name = "Frozen",
+					Delay = 0.08,
+					Amount = 15,
+				},{
+					Name = "Cold Mist",
+					Delay = 0.1,
+					Amount = 18,
+				},{
+					Name = "Deep Freeze",
+					Delay = 0.3,
+					Amount = 6,
+					Attributes = {
+						["Nimble"] = true,
+						["Hidden"] = true
+					},
+				},},
+			},
+		}, {
+			WaveLength = 60, --WAVE 19
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Frost Invader",
+					Delay = 0.3,
+					Amount = 8,
+					Attributes = {
+						["Nimble"] = true,
+					},
+				},{
+					Name = "Unstable Ice",
+					Delay = 0.5,
+					Amount = 6,
+				},{
+					Name = "Frost Hero",
+					Delay = 6.5,
+					Amount = 1,
+					Attributes = {
+						["Boss"] = true,
+						["Durable"] = true,
+						["Strength"] = true,
+					},
+				},{
+					Name = "Crying Angel",
+					Delay = 0.5,
+					Amount = 8,
+					Attributes = {
+						["Nimble"] = true,
+						["Bloated"] = true,
+					},
+				},{
+					Name = "Gingerbread",
+					Delay = 0.5,
+					Amount = 2,
+				},{
+					Name = "Frost Invader",
+					Delay = 0.5,
+					Amount = 3,
+				},{
+					Name = "Frost Necromancer",
+					Delay = 5.5,
+					Amount = 4,
+				},{
+					Name = "Frost Necromancer",
+					Delay = 1.5,
+					Amount = 1,
+					Attributes = {
+						["Strength"] = true,
+						["Hidden"] = true,
+					},
+				},},
+			},
+		}, {
+--wave 20 wait really!?
+		WaveLength = 99999,
+		Specials = function()
+				workspace.Music.Value = ""
+				local tw = game.TweenService:Create(game.Lighting, TweenInfo.new(5), {
+					FogEnd = 105
+				})
+				tw:Play()
+				tw.Completed:Connect(function()
+					workspace.Music.Value = "Blizzard"
+				end)
+			end,
+			WaveTimeline = {
+				Enemies = {{
+					Name = "Frost Invader",
+					Delay = 0.3,
+					Amount = 10,
+					Attributes = {
+						["Hidden"] = true,
+						["Nimble"] = true,
+					}
+				},{
+					Name = "Deep Freeze",
+					Delay = 0.65,
+					Amount = 7,
+				},{
+					Name = "Frost Necromancer",
+					Delay = 3,
+					Time = 2.5,
+					Amount = 2,
+					Attributes = {
+						["Hidden"] = true,
+						["Chance"] = 45
+					},
+				},{
+					Name = "Frost Mystery",
+					Delay = 0.5,
+					Amount = 10,
+					Attributes = {
+						["Nimble"] = true,
+						["Bloated"] = true,
+					},
+				},{
+					Name = "Unstable Ice",
+					Delay = 0.3,
+					Amount = 6,
+				},{
+					Name = "Crying Angel",
+					Delay = 0.8,
+					Amount = 20,
+					Attributes = {
+						["Nimble"] = true,
+						["Bloated"] = true,
+					},
+				},{
+					Name = "Unstable Ice",
+					Delay = 0.3,
+					Amount = 6,
+				},{
+					Name = "Frost Invader",
+					Delay = 0.2,
+					Amount = 6,
+					Attributes = {
+						["Strength"] = true,
+					},
+				},{
+					Name = "Unstable Ice",
+					Delay = 0.5,
+					Amount = 6,
+				},{
+					Name = "Yeti",
+					Delay = 1.5,
+					Amount = 4,
+					Attributes = {
+						["Bloated"] = true,
+					},
+				},{
+					Name = "Frost Ravager",
+					Delay = 1.75,
+					Amount = 5,
+				},{
+					Name = "Frost Hero",
+					Delay = 1,
+					Amount = 1,
+					Path = math.random(1, 2)
+				},{
+					Name = "Gingerbread",
+					Delay = 0.3,
+					Amount = 6,
+					Path = math.random(1, 2)
+				},{
+					Name = "Frost Hero",
+					Delay = 1,
+					Amount = 1,
+					Attributes = {
+						["Strength"] = true,
+					},
+					Path = math.random(1, 2)
+				},{
+					Name = "Krampus",
+					Delay = 0.5,
+					Amount = 1,
+					Path = math.random(1, 2),
+				},},
+			},
+		}},
+}
